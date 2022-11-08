@@ -1,0 +1,96 @@
+/*Geral*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: rgb(10, 72, 114);
+    border: none;
+
+}
+
+body {
+
+    background-image: url('./img/cidade2.jpg');
+    background-size: cover;
+   
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+a {
+    font-size: .8rem;
+
+}
+
+a:hover{
+    color: rgb(10, 72, 114);
+}
+
+/*container login*/
+
+#login-container {
+    background-color: aliceblue;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 10vh;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*Formulario*/
+
+form {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    font-size: .8rem ;
+}
+
+input {
+    border-bottom: 2px solid   rgb(10, 72, 114);
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    border-bottom: 2px solid  rgb(10, 72, 114);
+}
+
+#forgot-pass {
+    text-align: right;
+    display: block;
+}
+
+input[type="submit"]{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: rgb(237, 237, 245);
+    background-color: rgb(10, 72, 114);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(137, 138, 138);
+    transition: .5s;
+}

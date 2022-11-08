@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="stylecadastro.css">
+</head>
+<body>
+    <div id="main-container" >
+        <h1>Cadastre-se para Acessar o Sistema</h1>
+        <form id="register-form">
+            <div class="full-box">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail">
+            </div>
+            <div class="half-box spacing" >
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Digite seu Nome">
+            </div>
+            <div class="half-box">
+                <label for="lastname">Sobrenome</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Digite seu Sobrenome">
+            </div>
+            <div class="half-box spacing">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua Senha">
+            </div>
+            <div class="half-box">
+                <label for="passconfirmation">Conf. Senha</label>
+                <input type="password" name="passconfirmation" id="passconfirmation" placeholder="Confirme sua Senha">
+            </div>
+            <div class="full-box">
+               <input type="checkbox" name="agreement" id="agreement">
+               <label for="agreement" id="agreement-label">Eu li e aceito os <a href="../Projeto Puc/Documentos/Leiame.pdf">termos de uso</a></label>
+            </div>
+            <div class="full-box">
+               <input type="submit" id="button-submit" value="Registar">
+             </div>
+        </form>
+    </div>
+    <p class="error-validation template"></p>
+    <script src="scriptcadastro.js"></script>
+</body>
+</html>

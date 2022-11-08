@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reclamação</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style-grid.css">
+</head>
+<body>
+	<input type="checkbox" id="checkbox">
+	<header class="header">
+		<h2 class="u-name">Portal do <b>condominio</b>
+			<label for="checkbox">
+				<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+			</label>
+		</h2>
+		<i class="fa fa-power-off" aria-hidden="true"></i>
+	</header>
+	<div class="body">
+		<nav class="side-bar">
+			<div class="user-p">
+				<img src="img/cidade2.jpg">
+				
+			</div>
+			<ul>
+                <li>
+					<a href="index.html">
+						<i class="fa fa-home" aria-hidden="true"></i> 
+						<span>Home</span>
+					</a>
+				</li>
+                
+				<li>
+					<a href="5 Tela Financeiro.html">
+						<i class="fa fa-money" aria-hidden="true"></i> 
+						<span>Financeiro</span>
+					</a>
+				</li>
+				<li>
+					<a href="6 Tela reserva.html">
+						<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+						<span>Reservas</span>
+					</a>
+				</li>
+				<li>
+					<a href="7 Tela Sindico.html">
+						<i class="fa fa-user-circle" aria-hidden="true"></i>
+						<span>Sindico</span>
+					</a>
+				</li>
+				<li>
+					<a href="8 Tela Assembleias.html">
+						<i class="fa fa-users" aria-hidden="true"></i>
+						<span>Assembleias</span>
+					</a>
+				</li>
+				
+				<li>
+					<a href="10 Tela Sugestões.html">
+						<i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+						<span>Sugestões</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="section-reclame">
+    
+<main> 
+    <article>
+
+        <h1>Reclame aqui</h1>
+
+        <form action="#">
+
+
+            
+            <div class="form-row">
+                <label for="assunto">Assunto:</label>
+                <select name="assunto" id="campoAssunto">
+                    <option value="bararulho">Barulho</option>
+                    <option value="correspondencia">Correspondência</option>
+                    <option value="limpeza">Limpeza</option>
+                    <option value="vagas">Vagas</option>
+                    <option value="vazamento">Vazamentos</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="titulo">Título:</label>
+                <input type="text" name="titulo" id="campoTitulo" required>
+            </div>
+
+            <div class="form-row" id="textarea-row">
+                <label for="descricao">Conte mais sobre sua reclamação:</label>
+                <br>
+                <textarea name="descricao" id="campoDescricao" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-row" id = "row-btn">
+                <input type="submit" value="Enviar" onclick="salvarForm()">
+            </div>
+
+        </form>
+    </article>
+
+</main>
+
+
+
+<script>
+
+    var menu = document.getElementById("menu")
+
+    function clickMenu() {
+
+        if (menu.style.display == "block") {
+
+            menu.style.display = "none"
+        }
+        else {
+            menu.style.display = "block"
+        }
+    }
+
+    addEventListener('resize', mostraMenu)
+
+    function mostraMenu() {
+        if (window.innerWidth >= 700) {
+            menu.style.display = "block"
+        }
+        else {
+            menu.style.display = "none"
+        }
+    }
+
+
+    function salvarForm(){
+
+        let assunto = document.getElementById('campoAssunto').value
+        let titulo = document.getElementById('campoTitulo').value
+        let descricao = document.getElementById('campoDescricao').value
+
+        let reclamacao = {
+            'assunto' : assunto,
+            'titulo' : titulo,
+            'descricao': descricao
+        }
+
+        reclamacao = JSON.stringify(reclamacao)
+
+        nRec = localStorage.length
+
+
+        localStorage.setItem(`${nRec}`, reclamacao)
+
+        let voltar = window.confirm("Reclamção registrada com sucesso.\nGostaria de voltar para home?")
+
+        if(voltar) {
+            window.location.href("/")
+        }
+
+    }
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+		</section>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
